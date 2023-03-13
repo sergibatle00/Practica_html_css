@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* clases para el tamaño de los contenedores */
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.67%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.67%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.67%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.67%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* fuentes */
+
+@font-face {
+    font-family: h1;
+    src: url(../fonts/rammstein.ttf);
+}
+
+@font-face {
+    font-family: h2;
+    src: url(../fonts/Play\ Pretend.otf);
+}
+
+@font-face {
+    font-family: h3;
+    src: url(../fonts/BubaDEMO-Outline.otf);
+}
+
+@font-face {
+    font-family: p;
+    src: url(../fonts/Philosopher-Regular.ttf);
+}
+
+/* estilos del encabezado */
+
+h1 {
+    font-family: h1;
+    font-size: 4em;
+    width: fit-content;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #BA181B;
+    margin-bottom: 4px;
+}
+
+h3 {
+    font-family: h3;
+    text-align: center;
+    width: fit-content;
+}
+
+img {
+    height: 67px;
+    width: 67px;
+    border-radius: 5px;
+    border: solid black 1px;   
+    margin-left: 10px;
+}
+
+li {
+    text-align: center;
+    width: 100px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* estilos del menu desplegable */
+
+nav {
+    background: linear-gradient(#BA181B, #660708);
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 101px;
+    z-index: 1;
+}
+
+.head {
+    display: flex;
+    background-color: #BA181B;
+    align-items: flex-end;
+    justify-content: center;
+    margin: auto;
+    padding: 16px;
+    width: fit-content;
+}
+
+.nav {
+    height: auto;
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+
+.nav>li {
+    margin: auto;
+}
+
+.nav li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 5px;
+    display: block;
+}
+
+
+.nav li a:hover {
+    animation: change-color 0.25s forwards, bounce 0.25s forwards;
+}
+
+.nav li ul {
+    display: none;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+}
+
+.nav li:hover>ul {
+    display: block;
+    height: 130px;
+    animation: despliegue 0.5s ease-in-out;
+}
+
+/* animaciones */
+
+@keyframes despliegue {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 130px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes change-color {
+    from {
+        color: black;
+    }
+
+    to {
+        color: white;
+    }
+}
+
+@keyframes height {
+    from {
+        height: auto;
+    }
+
+    to {
+        height: 155px;
+    }
+}
+
+@keyframes salir {
+    from {
+        margin-top: -100px;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* estilos del contenido pricipal */
+
+main {
+    padding-top: 130px;
+}
+
+.bg {
+    background-color:rgba(228, 198, 198, 0.295);
+    padding: 60px 0px;
+}
+
+.ventaja {
+    background-image: url("../img/monke.PNG"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ventaja h2 {
+    font-family: h2;
+    text-align: center;
+    font-size: 3em;
+    animation: salir 1s;
+}
+
+
+.ventajas {
+    display: grid;
+
+    grid-template-columns: 450px 450px;
+    grid-template-rows: 320px 350px;
+    grid-template-areas:
+        ". ."
+        ". .";
+    justify-content: center;
+    margin-top: 25px;
+    grid-gap: 40px 40px;
+
+    margin: auto;
+}
+
+.ventajas div {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(186, 24, 27, 0.80);
+}
+
+.ventajas p {
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 14px;
+    font-size: 1.5em;
+}
+
+
+article.ventajas {
+    margin-top: 70px;
+}
+
+.ventaja h3 {
+    font-size: 1.5em;
+}
+
+/* estilos de pie de pagina */
+
+footer {
+    background-color: black;
+    height: 100px;
+}
+
+#foot {
+    color: white;
+    text-align: center;
+    padding: 36px 0;
+    font-family: p;
+    font-size: 1.5em;
+}
+
+/* media queries */
+
+@media screen and (max-width: 950px) {
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .ventajas div {
+        margin-bottom: 70px;
+    }
+
+    .ventajas {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 642px) {
+    
+    h1 {
+        font-size: 2.1em;
+        width: 55%;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    
+    .head {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    
+    h1 {
+        font-size: 1.8em;
+    }
+
+}
+
+@media screen and (max-width: 303px) {
+    
+    h1 {
+        width: 100%;
+    }
+
+    .ventaja h2 {
+        font-size: 2em;
+    }
+
+}
+
+

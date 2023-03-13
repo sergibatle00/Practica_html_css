@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/compra.css">
+    <link rel="shortcut icon" href="img/monkey.png" type="image/x-icon">
+    <title>Comprar</title>
+</head>
+
+<body>
+    <!-- encabezado -->
+    <header class="col-12">
+        <div class="head">
+            <h1>Compra un mono</h1>
+            <img src="./img/monke.PNG" alt="">
+        </div>
+    </header>
+    <!-- menu desplegable -->
+    <nav class="col-12">
+        <ul class="nav">
+            <li><a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="compra.html">Comprar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- contenido principal -->
+    <main class="col-12">
+        <h2>Formulario de compra</h2>
+        <div class="container col-3">
+            <!-- formulario -->
+            <form class="col-8" action="GET">
+                <div class="form">
+                    <label for="surname">Nombre</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form">
+                    <label for="surname">Apellidos</label>
+                    <input type="text" id="surname" name="surname">
+                </div>
+                <div class="form">
+                    <label for="day">Fecha de nacimiento</label>
+                    <input type="date" name="date">
+                </div>
+                <div class="form">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com">
+                </div>
+                <div class="form">
+                    <label for="phone">Teléfono</label>
+                    <input type="number" name="phone" id="phone">
+                </div>
+                <div class="form">
+                    <label for="mail">Dirección</label>
+                    <input type="text" name="adress" id="adress">
+                </div>
+                <div class="form">
+                    <label for="monkey">Mono</label>
+                    <select name="monkey" id="monkey" required>
+                        <option value="" disabled selected hidden>Selecciona</option>
+                        <option value="#">Selecciona</option>
+                        <option value="Juanito">Juanito</option>
+                        <option value="Mohamed">Mohamed</option>
+                        <option value="Marquiños">Marquiños</option>
+                        <option value="Gonzalo">Gonzalo</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Omar">Omar</option>
+                        <option value="Ricardo">Ricardo</option>
+                        <option value="Paco">Paco</option>
+                        <option value="Kevin">Kevin</option>
+                    </select>
+                </div>
+                <div class="form2">
+                    <input type="submit" value="Enviar" id="submit" name="submit">
+                    <input type="reset" value="Borrar" id="reset" name="reret">
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- pie de pagina -->
+    <footer class="col-12">
+        <div id="foot">
+            <p>CompraUnMono &#174;</p>
+        </div>
+    </footer>
+</body>
+
+</html>
